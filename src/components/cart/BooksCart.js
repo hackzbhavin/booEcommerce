@@ -53,7 +53,7 @@ constructor(props){
                               <button class="snipcart-add-item btn btn-warning btn-block m-2 books-buy-btn "
                               data-item-id={node.id}
                               data-item-price={node.price}
-                              data-item-url="www.learncodeonline.com"
+                              data-item-url="https://boo-ecomm.netlify.app/"
                               data-item-image={node.image.gatsbyImageData}
                               data-item-name={node.title}
                               

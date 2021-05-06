@@ -54,7 +54,14 @@ constructor(props){
 
                                 <ul class="colors">
                  
-                                </ul> <button class="btn btn-primary">Buy Now</button>
+                                </ul> 
+                                <button class="snipcart-add-item btn btn-primary"
+                                   data-item-id={node.id}
+                                   data-item-price={node.price}
+                                   data-item-url="https://boo-ecomm.netlify.app/"
+                                   data-item-image={node.image.gatsbyImageData}
+                                   data-item-name={node.title}
+                                   >Buy Now</button>
                             </div>
                         </div>
 

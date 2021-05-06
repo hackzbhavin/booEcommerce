@@ -19,7 +19,7 @@ export default function Infoblock({heading}) {
                     <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
                   </blockquote>
                         <Link to='/about'>
-                        <button className='btn btn-warning btn-lg '>{heading}</button>
+                        {heading}
                         
                         </Link>
 
