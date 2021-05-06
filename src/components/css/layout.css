@@ -1,0 +1,50 @@
+.bg-theme{
+  background-color: #242B2E ;
+}
+.bg-allbooks-theme{
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', serif;
+  background: #AB47BC
+}
+/* .btn-warning:hover{
+  background: rgb(255, 255, 255);
+  box-shadow:0 0 30px rgba(0, 0, 0, 0.453);
+
+  -webkit-transition: 0.1s ease-in
+} */
+
+.nav-logo{
+
+  font-size: 40px;
+
+}  
+
+.card-title{
+  font-size:15px;
+}
+
+.hero-background{
+  min-height: 100vh;
+  display: flex;
+
+  width: 100%;
+
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.about-background{
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.cart-icon{
+  font-size:20px
+}
