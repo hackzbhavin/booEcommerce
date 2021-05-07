@@ -2,6 +2,17 @@ import React, { Component } from 'react'
 import Heading from '../Reusable/Heading'
 import { GatsbyImage  } from "gatsby-plugin-image"
 
+const getCat = items => {
+    let holdItems = items.map(items=>{
+        return items.node.category
+    })
+    //for no repetations
+    let holdCategories = new Set(holdItems)
+    let categories = Array.from(holdCategories)
+    categories = ["all", ...categories]
+    return categories
+}
+
 
 
 export default class BooksCart extends Component {
@@ -10,8 +21,27 @@ constructor(props){
     super(props)
     this.state ={
         books: props.books.edges,
-        mybooks: props.books.edges
+        mybooks: props.books.edges,
+        mycategories:getCat(props.books.edges)
     } 
+}
+
+cateClicked = category =>{
+    let keepItSafe = [...this.state.books]
+    if(category==='all'){
+        this.setState(()=>{
+            return {
+                mybooks: keepItSafe
+            }
+        })
+    }else{
+        let holdMeCategories = keepItSafe.filter(({node})=>node.category === category)
+        this.setState(()=>{
+            return {
+                mybooks: holdMeCategories
+            }
+    })
+}
 }
 
     render() {
@@ -21,6 +51,25 @@ constructor(props){
             <div className='container'>
             
                 <Heading title='Books' />
+                
+                <div className='row my-3'>
+                <div className='col-10 mx-auto text-center'>
+
+                {
+                    this.state.mycategories.map((category, index)=>{
+                        return (
+                            <button type='button' className='btn btn-info  m-3 px-3'
+                            key={index}
+                            onClick={()=>{
+                                this.cateClicked(category)
+                            }}
+
+                            >{category}</button>
+                        )
+                    })
+                }
+                </div>
+                </div>
             
                 <div className='row'>
             

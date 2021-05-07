@@ -29,9 +29,9 @@ const AboutPage = ({data}) => (
            
               
               <Teamphoto 
-              person1_img = 'https://images.pexels.com/photos/2756842/pexels-photo-2756842.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
-              person2_img ='https://images.pexels.com/photos/2756843/pexels-photo-2756843.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
-              person3_img ='https://images.pexels.com/photos/2641069/pexels-photo-2641069.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+              person1_img ='https://images.pexels.com/photos/263564/pexels-photo-263564.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+              person2_img ='https://images.pexels.com/photos/263564/pexels-photo-263564.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+              person3_img ='https://images.pexels.com/photos/263564/pexels-photo-263564.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
               
               />
 
