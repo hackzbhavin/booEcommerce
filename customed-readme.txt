@@ -19,6 +19,7 @@ https://app.snipcart.com/register
 
 https://www.gatsbyjs.com/plugins/gatsby-plugin-snipcart/?=snipca
 
+https://formspree.io/
 
 =================================================================
 ============= installation ======================================
@@ -105,8 +106,10 @@ npm install gatsby-plugin-snipcart
 
 
 
+=================== For Contact Form ====
+
+https://formspree.io/
 
 =================== Netlify deploy ====
 
 github and netlify must have same email id
-

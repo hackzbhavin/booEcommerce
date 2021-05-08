@@ -39,7 +39,8 @@ export default function Navbar() {
                         <li className='nav-item'><Link to='/products' className='nav-link text-white'>Products</Link></li>
                         <li className='nav-item'><Link to='/about' className='nav-link text-white'>About</Link></li>
                         <li className='nav-item'><Link to='/contact' className='nav-link text-white'>Contact</Link></li>
-                        <li className='nav-item'><Link to='/' className='nav-link text-white'><FaCartArrowDown className='cart-icon' /></Link></li>
+                        <li className='nav-item'><Link to='' className='nav-link text-white snipcart-customer-signin'>Summary</Link></li>
+                        <li className='nav-item'><Link to='/' className='nav-link text-white'><FaCartArrowDown className='cart-icon snipcart-checkout' /></Link></li>
                     </ul>
                 </div>
 
