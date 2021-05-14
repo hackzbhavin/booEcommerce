@@ -5,9 +5,9 @@ import { graphql } from 'gatsby'
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+import Welcome from '../components/Reusable/Welcome'
 import HeroSection from '../components/Reusable/Hero'
 import Infoblock from '../components/Reusable/Infoblock'
-import Dualinfoblock from '../components/Reusable/Dualinfoblock'
 import BooksCart from '../components/cart/BooksCart'
 
 
@@ -19,7 +19,7 @@ const IndexPage = ({data}) => (
       <Seo title="Home" />
               
 
-
+<Welcome />
 
               <HeroSection
               img = {data.img.childImageSharp.fluid}
@@ -38,10 +38,7 @@ const IndexPage = ({data}) => (
 
               />
 
-              <Dualinfoblock 
-              heading='First Product' 
-              img='https://images.pexels.com/photos/373465/pexels-photo-373465.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260'
-              />
+
 
 
   </Layout>
@@ -62,7 +59,7 @@ export const query = graphql`
   }
 
 
-  mybooks:allContentfulBooks {
+  mybooks:allContentfulBooks(limit:6) {
     edges {
       node {
         id

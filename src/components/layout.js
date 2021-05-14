@@ -19,7 +19,7 @@ import "./css/product.css"
 
 
 const Layout = ({children}) => (
-  <div>
+  <div className="bg-light">
 <Navbar />
   {children}
 

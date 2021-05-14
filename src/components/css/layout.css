@@ -1,6 +1,13 @@
 .bg-theme{
   background-color: #242B2E ;
 }
+
+body{
+  overflow-x:hidden;
+}
+
+
+
 .bg-allbooks-theme{
   margin: 0;
   padding: 0;
@@ -47,4 +54,12 @@
 
 .cart-icon{
   font-size:20px
+}
+
+.book-cover:hover{
+cursor:pointer;
+transition: all linear 0.7s;
+/* box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5); */
+/* -webkit-transition:1s ease-in; */
+filter: grayscale(100%);
 }

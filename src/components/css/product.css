@@ -11,8 +11,32 @@
     box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
     border-radius: 5px;
     background: #0e0e0f;
+    -webkit-transition: 1s ease-out;
+
     overflow: hidden
 }
+
+.product:hover {
+    cursor: pointer;
+    position: relative;
+    border-radius: 15px;
+
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 400px;
+    background: linear-gradient(
+        140deg,
+        #42c3ca 0%,
+        #42c3ca 50%,
+        #42c3cac7 75%
+      ) !important;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.8);
+    -webkit-transition: 1s ease-in;
+    background: #0e0e0f;
+    overflow: hidden
+}
+
 
 .product .imgbox {
     height: 100%;

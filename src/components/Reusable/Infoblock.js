@@ -5,7 +5,7 @@ import {Link} from 'gatsby'
 export default function Infoblock({heading}) {
     return (
    
-        <section className='bg-theme my-5 py-4'>
+        <section className='bg-light my-5 py-4'>
 
         <div className='container'>
 
@@ -15,7 +15,7 @@ export default function Infoblock({heading}) {
 
                     <div className='col-10 col-sm-8 mx-auto text-center'>
                     <blockquote class="blockquote text-center">
-                    <p class="mb-0 text-white">A well-known quote, contained in a blockquote element.</p>
+                    <p class="mb-0 text-dark">A well-known quote, contained in a blockquote element.</p>
                     <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
                   </blockquote>
                         <Link to='/about'>

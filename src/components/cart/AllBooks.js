@@ -49,7 +49,7 @@ cateClicked = category =>{
     render() {
         return (
             <div>
-            <section className='py-5 bg-allbooks-theme'>
+            <section className='py-5 bg-light'>
             <div className='container'>
             
                 <Heading title='Books' />
@@ -85,14 +85,7 @@ cateClicked = category =>{
                             
                             className='card-deck my-2  col-10 col-md-4 mx-auto '
                         >
-
-                        
-
-                     
-                 
-                        
-                      
-                            <div class="product">
+                                 <div class="product">
                             <div class="imgbox">  <GatsbyImage image={image} class="card-img-top mx-auto p-2 mh-100 mw-100 " /> </div>
                             <div class="specifies">
                                 <h2>{node.title} <br/> <span class='text-success'>Rs.{node.price}</span></h2>

@@ -47,10 +47,10 @@ cateClicked = category =>{
     render() {
         return (
             <div>
-            <section className='py-5 '>
+            <section className='py-5 bg-light'>
             <div className='container'>
             
-                <Heading title='Books' />
+                <Heading title='Our Top Picks' />
                 
                 <div className='row my-3'>
                 <div className='col-10 mx-auto text-center'>
@@ -90,7 +90,7 @@ cateClicked = category =>{
                                                     
                           
                             <div class="row no-gutters bg-light position-relative ">
-                            <div class="col-md-6 mb-md-0 p-md-4 shadow-lg p-3 mb-5 bg-white rounded">
+                            <div class="col-md-6 mb-md-0 p-md-4 shadow-lg p-3 mb-5 bg-white rounded book-cover">
                             <GatsbyImage image={image} class="card-img-top mx-auto p-2 mh-100 mw-100 " />
                             </div>
                             <div class="col-md-6 position-static p-4 pl-md-0 ">
@@ -110,10 +110,12 @@ cateClicked = category =>{
                             </div>
                           </div>
                    
-            
+                          <br/>
+                          <br/>
+                          <br/>
+
 
                         </div>
-                        
                         
                         )
             
