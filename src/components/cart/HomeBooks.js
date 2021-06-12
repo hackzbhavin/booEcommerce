@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Heading from '../Reusable/Heading'
 import { GatsbyImage  } from "gatsby-plugin-image"
+// import {Link} from 'gatsby'
+
 
 const getCat = items => {
     let holdItems = items.map(items=>{
@@ -70,14 +72,14 @@ cateClicked = category =>{
                 }
                 </div>
                 </div>
-            
+
                 <div className='row'>
-            
                 {
                     this.state.mybooks.map(({node})=>{
                         const image = node.image.gatsbyImageData
-
+                        const id = node.id
                         return(
+
                             <div
                             
                             key ={node.id}
@@ -98,6 +100,8 @@ cateClicked = category =>{
                               <p className='text-monospace m-2'>{node.author}</p>
                               <p class='text-muted m-2'>{node.category}</p>
                               <p class="card-text text-left text-success m-2">Rs. {node.price}</p>
+                              <a className='btn btn-warning btn-block m-2' href={id}>To Product</a>
+
 
                               <button class="snipcart-add-item btn btn-warning btn-block m-2 books-buy-btn "
                               data-item-id={node.id}
@@ -116,7 +120,7 @@ cateClicked = category =>{
 
 
                         </div>
-                        
+
                         )
             
                         
@@ -127,7 +131,6 @@ cateClicked = category =>{
                 }
                     
                 </div>
-                
             </div>
             </section>
             

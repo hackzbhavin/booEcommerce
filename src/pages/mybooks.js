@@ -5,45 +5,25 @@ import { graphql } from 'gatsby'
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-import Welcome from '../components/Reusable/Welcome'
-import HeroSection from '../components/Reusable/Hero'
-import Infoblock from '../components/Reusable/Infoblock'
-import BooksCart from '../components/cart/HomeBooks'
 
 
+import SingleProduct from '../components/SingleProduct/SingleProduct'
 
-const IndexPage = ({data}) => (
+
+const MyBooksPage = () => (
   
   <Layout>
    
-      <Seo title="Home" />
+      <Seo title="MyBooks" />
+      
+      <SingleProduct />
               
-
-<Welcome />
-
-
-              <HeroSection
-              img = {data.img.childImageSharp.fluid}
-              title='dash dash'
-              subtitle='Bring Brains not Heads'
-              heroclass = 'hero-background '
-            />
-
-              <BooksCart  
-              books = {data.mybooks}
-              />
-
-
-              <Infoblock 
-              heading='About Us'
-
-              />
-
-
 
 
   </Layout>
 )
+
+
 
 // graphql sql query 
 export const query = graphql`
@@ -89,4 +69,5 @@ export const query = graphql`
 
 `
 
-export default IndexPage
+
+export default MyBooksPage
