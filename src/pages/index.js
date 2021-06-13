@@ -1,92 +1,66 @@
 import * as React from "react"
-import { graphql } from 'gatsby'
+import { graphql } from "gatsby"
 // import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-import Welcome from '../components/Reusable/Welcome'
-import HeroSection from '../components/Reusable/Hero'
-import Infoblock from '../components/Reusable/Infoblock'
-import BooksCart from '../components/cart/HomeBooks'
+import Welcome from "../components/Reusable/Welcome"
+import HeroSection from "../components/Reusable/Hero"
+import Infoblock from "../components/Reusable/Infoblock"
+import BooksCart from "../components/cart/HomeBooks"
+import SingleProductInfo from "../components/Reusable/SingleProductInfo"
 
-
-
-const IndexPage = ({data}) => (
-  
+const IndexPage = ({ data }) => (
   <Layout>
-   
-      <Seo title="Home" />
-              
+    <Seo title="Home" />
 
-<Welcome />
+    <Welcome />
 
+    <HeroSection
+      img={data.img.childImageSharp.fluid}
+      title="dash dash"
+      subtitle="Bring Brains not Heads"
+      heroclass="hero-background "
+    />
 
-              <HeroSection
-              img = {data.img.childImageSharp.fluid}
-              title='dash dash'
-              subtitle='Bring Brains not Heads'
-              heroclass = 'hero-background '
-            />
+    <SingleProductInfo />
 
-              <BooksCart  
-              books = {data.mybooks}
-              />
+    <BooksCart books={data.mybooks} />
 
-
-              <Infoblock 
-              heading='About Us'
-
-              />
-
-
-
-
+    <Infoblock heading="About Us" />
   </Layout>
 )
 
-// graphql sql query 
+// graphql sql query
 export const query = graphql`
-{
-  img:file(relativePath:{eq: "heromain.png"}){
-
-  childImageSharp{
-    
-    fluid{
-      ...GatsbyImageSharpFluid_tracedSVG
-
+  {
+    img: file(relativePath: { eq: "heromain.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
         }
+      }
     }
-  }
 
-
-  mybooks:allContentfulBooks(limit:6) {
-    edges {
-      node {
-        id
-        title
-        price
-        category
-        author
-        description {
-          description
-        }
-        image {
-       
-            gatsbyImageData(width: 150, height:250)
-          
-          
+    mybooks: allContentfulBooks(limit: 6) {
+      edges {
+        node {
+          id
+          title
+          price
+          category
+          author
+          description {
+            description
+          }
+          image {
+            gatsbyImageData(width: 150, height: 250)
+          }
         }
       }
     }
   }
-
-
-}
-
-
-
-
 `
 
 export default IndexPage

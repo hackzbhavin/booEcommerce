@@ -1,6 +1,7 @@
 import React from 'react'
 import { StaticImage } from "gatsby-plugin-image"
 
+
 export default function Welcome() {
     return (
         <div>
@@ -15,6 +16,7 @@ export default function Welcome() {
         </div>
       </div>
       
+     
       
         </div>
     )

@@ -20,14 +20,16 @@ exports.createPages = async ({ actions: {createPage},graphql }) => {
     return 
   }
 
+//stores the path of components where we want to catch the id
 const productComponent = require.resolve("./src/components/SingleProduct/SingleProduct.js") 
+
 
 data.data.allContentfulBooks.edges.forEach(edge => {
   createPage({
     path:`${edge.node.id}/`,
     component:productComponent,
     context:{
-      id:edge.node.id
+      id:edge.node.id,
     }
   })
   

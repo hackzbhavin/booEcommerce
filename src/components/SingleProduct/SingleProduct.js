@@ -1,13 +1,18 @@
-import React from "react"
+import React, {useEffect} from "react"
 import { graphql } from "gatsby"
 // import {MDXRenderer} from 'gatsby-plugin-mdx'
 import { GatsbyImage } from "gatsby-plugin-image"
-import Prism from "prismjs"
+import Aos from 'aos'
 
 import Layout from "../layout"
+import SingleProductFeatures from "./SingleProductFeatures"
+// import CarouselCategory from "./CarouselCategory"
 
 //css
 import "../css/bootstrap.css"
+import 'aos/dist/aos.css'
+
+
 
 export const query = graphql`
   query($id: String!) {
@@ -25,11 +30,22 @@ export const query = graphql`
       }
     }
   }
+
+
 `
 
 export default function SingleProduct({ data }) {
   const prod = data.contentfulBooks
   const image = data.contentfulBooks.image.gatsbyImageData
+  
+//for animations
+useEffect(() => {
+    
+    Aos.init({duration:2000});
+
+}, [])
+
+
   return (
     <Layout>
       <section class=" pt-5 pb-6 mt-4 bg-light">
@@ -46,7 +62,8 @@ export default function SingleProduct({ data }) {
               <p class="lead mb-5">{prod.description.description}</p>
             </div>
           </div>
-          <div class="row mt-5">
+
+          <div class="row mt-5" data-aos='fade-up' data-aos-anchor-placement="top-center">
             <div class="col-md-9 mx-auto">
               <div class="code-window">
                 <div class="dots">
@@ -57,34 +74,37 @@ export default function SingleProduct({ data }) {
                 <pre class="language-html line-numbers">
                   <code class="language-html">
                     <div class="row mt-4 p-3">
-                      <div className="col-6">
+                      <div className="col-md-4 ">
                         <GatsbyImage image={image} class="rounded float-left" />
                       </div>
 
-                      <div className="col-6">
-                          {/* Write the code to print on webpage */}
+                      <div className="col-md-8 ">
+                        {/* Write the code to print on webpage */}
                         <pre>
                           <code className="language-javascript">
                             {`
-  
-                                onSubmit(e) {
-                                e.preventDefault();
-                                cart = {
-                                    title: '${prod.title}',
-                                    price : 'Rs. ${prod.price}' 
-                                    };
-                                }
+    onSubmit(e) {
+        e.preventDefault();
+        cart = {
+            title: '${prod.title}',
+            price : 'Rs. ${prod.price}', 
+            author : '${prod.author}', 
+            genre : '${prod.category}', 
+        };
+    }
                             `}
                           </code>
                         </pre>
 
-                        <a
-                          href="https://github.com/LeaVerou/prism/"
-                          class="btn btn-danger svg-icon "
+                        <button
+                          class="snipcart-add-item btn btn-danger svg-icon "
+                          data-item-id={prod.id}
+                          data-item-price={prod.price}
+                          data-item-url="https://boo-ecomm.netlify.app/"
+                          data-item-name={prod.title}
                         >
-                          <em class="mr-2" data-feather="github"></em>
                           Add to Cart
-                        </a>
+                        </button>
                       </div>
                     </div>
                   </code>
@@ -94,6 +114,10 @@ export default function SingleProduct({ data }) {
           </div>
         </div>
       </section>
+
+      {/* Features Component */}
+<SingleProductFeatures />
+
     </Layout>
   )
 }
