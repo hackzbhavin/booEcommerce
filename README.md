@@ -139,4 +139,6 @@ https://www.gatsbyjs.com/plugins/gatsby-plugin-snipcart/?=snipca
 
 npm install gatsby-plugin-snipcart
     
+![Image of UI](src/images/productfullpage.jpeg)
+
         
