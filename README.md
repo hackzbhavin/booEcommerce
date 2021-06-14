@@ -1,7 +1,12 @@
+
+<h2 align="center">Home Page UI</h2>
+<img src='https://github.com/hackzbhavin/booEcommerce/blob/main/src/images/homefullpage.jpeg'  />
+
 <h2 align="center">Product Page UI</h2>
+<img src='https://github.com/hackzbhavin/booEcommerce/blob/main/src/images/productfullpage.jpeg'  />
 
-![Image of UI](src/images/productfullpage.jpeg)
-
+<h2 align="center">Contact Page UI</h2>
+<img src='https://github.com/hackzbhavin/booEcommerce/blob/main/src/images/contactfullpage.jpeg'  />
 
 
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
