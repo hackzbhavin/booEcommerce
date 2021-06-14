@@ -1,3 +1,9 @@
+<h2 align="center">Product Page UI</h2>
+
+![Image of UI](src/images/productfullpage.jpeg)
+
+
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.com">
@@ -138,5 +144,5 @@ https://app.snipcart.com/register
 https://www.gatsbyjs.com/plugins/gatsby-plugin-snipcart/?=snipca
 
 npm install gatsby-plugin-snipcart
-    
+
         
