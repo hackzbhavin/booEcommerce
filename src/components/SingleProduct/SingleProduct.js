@@ -83,8 +83,7 @@ useEffect(() => {
                         <pre>
                           <code className="language-javascript">
                             {`
-    onSubmit(e) {
-        e.preventDefault();
+    onClickAddToCart(e) {
         cart = {
             title: '${prod.title}',
             price : 'Rs. ${prod.price}', 
@@ -103,7 +102,7 @@ useEffect(() => {
                           data-item-url="https://boo-ecomm.netlify.app/"
                           data-item-name={prod.title}
                         >
-                          Add to Cart
+                          Add To Cart
                         </button>
                       </div>
                     </div>

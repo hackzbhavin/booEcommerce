@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
 import Heading from '../Reusable/Heading'
 import { GatsbyImage  } from "gatsby-plugin-image"
+import { Link } from 'gatsby'
 // import {Link} from 'gatsby'
+
+
 
 
 const getCat = items => {
@@ -19,6 +22,7 @@ const getCat = items => {
 
 export default class BooksCart extends Component {
 
+    
 constructor(props){
     super(props)
     this.state ={
@@ -46,10 +50,12 @@ cateClicked = category =>{
 }
 }
 
+
     render() {
+
         return (
             <div>
-            <section className='py-5 bg-light'>
+            <section className='py-5 bg-light'  data-aos='fade-left' data-aos-anchor-placement="top-center">
             <div className='container'>
             
                 <Heading title='Our Top Picks' />
@@ -79,7 +85,6 @@ cateClicked = category =>{
                         const image = node.image.gatsbyImageData
                         const id = node.id
                         return(
-
                             <div
                             
                             key ={node.id}
@@ -87,7 +92,7 @@ cateClicked = category =>{
                             className='card-deck my-2  col-12 col-md-4 mx-auto '
                         >
 
-                      
+<Link to={id}>                            
 
                                                     
                           
@@ -100,7 +105,6 @@ cateClicked = category =>{
                               <p className='text-monospace m-2'>{node.author}</p>
                               <p class='text-muted m-2'>{node.category}</p>
                               <p class="card-text text-left text-success m-2">Rs. {node.price}</p>
-                              <a className='btn btn-warning btn-block m-2' href={id}>To Product</a>
 
 
                               <button class="snipcart-add-item btn btn-warning btn-block m-2 books-buy-btn "
@@ -118,6 +122,7 @@ cateClicked = category =>{
                           <br/>
                           <br/>
 
+                          </Link>
 
                         </div>
 

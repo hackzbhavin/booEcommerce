@@ -1,10 +1,18 @@
-import React from 'react'
+import Aos from 'aos';
+import React, {useEffect} from 'react'
 import Heading from '../Reusable/Heading'
 
 
 export default function Contact() {
+
+    //for animations
+useEffect(() => {
+    
+    Aos.init({duration:2000});
+
+}, [])
     return (
-        <section className='py-3'>
+        <section className='py-3' data-aos='fade-up' data-aos-anchor-placement="top-center">
         
         <Heading title='Contact Us' />
 

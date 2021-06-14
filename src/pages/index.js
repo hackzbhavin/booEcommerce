@@ -5,11 +5,14 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+
+
 import Welcome from "../components/Reusable/Welcome"
 import HeroSection from "../components/Reusable/Hero"
 import Infoblock from "../components/Reusable/Infoblock"
 import BooksCart from "../components/cart/HomeBooks"
 import SingleProductInfo from "../components/Reusable/SingleProductInfo"
+
 
 const IndexPage = ({ data }) => (
   <Layout>

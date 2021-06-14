@@ -60,6 +60,7 @@ cateClicked = category =>{
                 {
                     this.state.mycategories.map((category, index)=>{
                         return (
+
                             <button type='button' className='btn btn-info  m-3 px-3'
                             key={index}
                             onClick={()=>{
@@ -77,6 +78,7 @@ cateClicked = category =>{
                 {
                     this.state.mybooks.map(({node})=>{
                         const image = node.image.gatsbyImageData
+                        const id = node.id
 
                         return(
                             <div
@@ -85,6 +87,7 @@ cateClicked = category =>{
                             
                             className='card-deck my-2  col-10 col-md-4 mx-auto '
                         >
+                            <a href={id}>
                                  <div class="product">
                             <div class="imgbox">  <GatsbyImage image={image} class="card-img-top mx-auto p-2 mh-100 mw-100 " /> </div>
                             <div class="specifies">
@@ -108,7 +111,7 @@ cateClicked = category =>{
                                    >Buy Now</button>
                             </div>
                         </div>
-
+                        </a>
                         </div>
                     
                         

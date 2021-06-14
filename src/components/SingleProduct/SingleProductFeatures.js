@@ -1,8 +1,11 @@
+import Aos from 'aos'
 import React from 'react'
+
+
 
 export default function SingleProductFeatures() {
     return (
-        <div>
+        <div data-aos='fade-down' data-aos-anchor-placement="top-center">
             <section class="py-6">
     <div class="container">
         <div class="row">
