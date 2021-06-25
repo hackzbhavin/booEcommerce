@@ -26,7 +26,7 @@ const productComponent = require.resolve("./src/components/SingleProduct/SingleP
 
 data.data.allContentfulBooks.edges.forEach(edge => {
   createPage({
-    path:`${edge.node.id}/`,
+    path:`products/${edge.node.id}`,
     component:productComponent,
     context:{
       id:edge.node.id,
